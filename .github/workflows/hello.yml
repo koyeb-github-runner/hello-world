@@ -1,0 +1,15 @@
+name: Be polite and say hello
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  docker:
+    runs-on: koyeb-fra-medium
+    container: alpine
+    steps:
+      - name: Say hello
+        run: |
+          echo "Hello world!"
